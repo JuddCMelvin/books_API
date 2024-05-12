@@ -29,7 +29,7 @@ books.get('/', (req, res) => {
 
 // Show:
 books.get('/:id', (req, res) => {
-    Book.findOne({ id: req.params.id .toLowerCase() })
+    Book.findOne({ _id: req.params.id .toLowerCase() })
         .then(foundbooks => {
             res.json(foundbooks)
         })
